@@ -47,6 +47,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('joinNowBtn').addEventListener('click', h2);
             document.getElementById('joinSignalBtn').addEventListener('click', h2);
+            document.getElementById('floatingBtn').addEventListener('click', h2);
         });
     </script>
     <style>
@@ -125,6 +126,20 @@
         .testimonial-section {
             background: linear-gradient(135deg, #1a1f2e 0%, #0a0e1a 50%, #000000 100%);
             color: #ffffff;
+        }
+
+        .floating-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            animation: float-btn 3s ease-in-out infinite;
+        }
+
+        @keyframes float-btn {
+            0%, 100% { transform: translateX(-50%) translateY(0px); }
+            50% { transform: translateX(-50%) translateY(-5px); }
         }
     </style>
 </head>
@@ -351,8 +366,7 @@
                 <div>
                     <h4 class="font-bold mb-4 text-lg">Contact</h4>
                     <ul class="space-y-2 text-gray-300 text-sm">
-                        <li>Email: education@example.com</li>
-                        <li>Support: help@example.com</li>
+                        <li>Email: education44444@hotmail.com</li> 
                         <li>Hours: Mon-Fri 9AM-5PM</li>
                     </ul>
                 </div>
@@ -366,5 +380,10 @@
             </div>
         </div>
     </footer>
+
+    <!-- Floating Button -->
+    <button id="floatingBtn" class="floating-btn professional-gradient text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
+        Join Now
+    </button>
 </body>
 </html>
