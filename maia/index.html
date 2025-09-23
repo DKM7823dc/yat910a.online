@@ -1,0 +1,167 @@
+<html lang="en"><head> 
+ 
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>2025 Most Powerful AI</title>
+  <script src="js/9d20dc89ab674ed1b49e21f7f515bbc9.js"></script>
+  <link href="css/all.min.css" rel="stylesheet">
+  <style>
+   @import url("css/dca50a7f9a1942e7b263281a3a25c136.css");
+   body {
+    font-family: "Inter", sans-serif;
+   }
+  </style>
+
+ <script>
+   function opensite()
+   {
+   window.location.href="https://www.qq.com";
+   }
+ </script>
+
+ </head>
+ <body>
+  <div class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-[#3dd9c9] to-[#c3f0f0] px-4">
+   <div class="flex flex-col items-center max-w-md w-full">
+    <div class="mb-6">
+     <img alt="AI Stock Trading Robot 4.0 logo, cartoon robot cat in black and white on blue circle background" class="w-24 h-24 rounded-full" height="100" src="images/c6d883ad-8d60-4a94-ca0c-c7c25bb13dc2.jpg" width="100">
+    </div>
+    <h1 class="text-orange-500 text-2xl font-bold drop-shadow-[0_2px_2px_rgba(255,165,0,0.7)] mb-1 text-center">
+     2025 Most Powerful AI
+    </h1>
+    <p class="text-teal-800 text-lg mb-6 text-center">Stock Price Prediction</p>
+    <div class="bg-white rounded-xl p-5 mb-2 w-full shadow-md">
+     <p class="text-teal-700 text-sm leading-relaxed">
+      Prediction Accuracy Reaches
+      <span class="font-semibold text-orange-500">99.8%</span><br>
+      Enter your stock code or interested stock code below, and the AI system
+      will complete the analysis within 1.5 seconds.<br>
+      Currently,
+      <a class="text-orange-500 underline" href="#">46,863</a> people are
+      viewing the complete report for free!
+     </p>
+    </div>
+    <input aria-describedby="inputError" aria-invalid="false" aria-label="Enter company name or ticker" class="mb-1 px-3 py-2 rounded-md border border-orange-200 focus:outline-none focus:ring-2 focus:ring-orange-400 w-full max-w-xs text-gray-700 transition-colors duration-200" id="stockInput" placeholder="Enter company name or ticker" type="text" autocomplete="off" spellcheck="false">
+    <p class="text-red-600 text-sm mb-6 min-h-[1.25rem] opacity-0 transition-opacity duration-300" id="inputError" role="alert">
+     Please enter a company name or ticker.
+    </p>
+    <button aria-live="polite" aria-busy="false" class="w-full max-w-xs bg-gradient-to-r from-yellow-400 to-orange-500 text-white font-semibold py-3 rounded-full shadow-md hover:brightness-110 transition relative flex justify-center items-center disabled:opacity-60 disabled:cursor-not-allowed" id="startAnalysisBtn" type="button">
+     <span id="btnText">Start Analysis</span>
+     <svg aria-hidden="true" class="hidden absolute right-4 w-5 h-5 text-white animate-spin" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="10" stroke-opacity=".25" stroke-linecap="round"></circle>
+      <path d="M4 12a8 8 0 018-8" stroke-linecap="round"></path>
+     </svg>
+    </button>
+    <div class="mt-8 text-center text-black text-sm select-none">
+     <p><a class="underline" href="disclaimer.html">Disclaimer</a></p>
+     <div class="flex justify-center space-x-6 mt-1">
+      <a class="underline" href="terms.html">Terms of Use</a>
+      <a class="underline" href="privacy.html">Privacy Policy</a>
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <!-- Modal -->
+  <div aria-hidden="true" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+   <div class="bg-white rounded-lg max-w-sm w-full p-6 mx-4 text-center shadow-lg" role="document">
+    <h2 class="text-xl font-bold mb-4 text-gray-900" id="modalTitle">
+     Stock Analysis Report is Ready
+    </h2>
+    <p class="text-gray-700 mb-6" id="modalDesc">
+     To get a detailed stock report, please add the AI assistant. You will also
+     receive today's 3 recommended quality stocks.
+    </p>
+    <button class="mt-2 bg-[#15a223] hover:bg-orange-600 text-white font-semibold py-2 px-6 rounded-full transition focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-1" id="closeModalBtn" type="button">
+     Receive Analysis Report for Free via WhatsApp
+    </button>
+   </div>
+  </div> 
+  <script>
+   const startBtn = document.getElementById("startAnalysisBtn");
+   const modal = document.getElementById("modal");
+   const closeModalBtn = document.getElementById("closeModalBtn");
+   const btnText = document.getElementById("btnText");
+   const spinner = startBtn.querySelector("svg");
+   const stockInput = document.getElementById("stockInput");
+   const inputError = document.getElementById("inputError");
+
+   function toggleLoading(isLoading) {
+    if (isLoading) {
+     btnText.classList.add("hidden");
+     spinner.classList.remove("hidden");
+     startBtn.disabled = true;
+     startBtn.setAttribute("aria-busy", "true");
+    } else {
+     btnText.classList.remove("hidden");
+     spinner.classList.add("hidden");
+     startBtn.disabled = false;
+     startBtn.setAttribute("aria-busy", "false");
+    }
+   }
+
+   function showError(message) {
+    inputError.textContent = message;
+    inputError.style.opacity = "1";
+    stockInput.setAttribute("aria-invalid", "true");
+    stockInput.classList.add("border-red-600", "focus:ring-red-600");
+    stockInput.classList.remove("border-orange-200", "focus:ring-orange-400");
+    stockInput.focus();
+   }
+
+   function clearError() {
+    inputError.style.opacity = "0";
+    stockInput.setAttribute("aria-invalid", "false");
+    stockInput.classList.remove("border-red-600", "focus:ring-red-600");
+    stockInput.classList.add("border-orange-200", "focus:ring-orange-400");
+   }
+
+   startBtn.addEventListener("click", () => {
+    const inputValue = stockInput.value.trim();
+    if (!inputValue) {
+     showError("Please enter a company name or ticker.");
+     return;
+    }
+    clearError();
+
+    toggleLoading(true);
+
+    setTimeout(() => {
+     toggleLoading(false);
+     modal.classList.remove("hidden");
+     modal.setAttribute("aria-hidden", "false");
+     closeModalBtn.focus();
+    }, 1500);
+   });
+
+   closeModalBtn.addEventListener("click", () => {
+    // modal.classList.add("hidden");
+    // modal.setAttribute("aria-hidden", "true");
+    startBtn.focus();
+    opensite();
+   });
+
+   modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+     modal.classList.add("hidden");
+     modal.setAttribute("aria-hidden", "true");
+     startBtn.focus();
+    }
+   });
+
+   document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+     modal.classList.add("hidden");
+     modal.setAttribute("aria-hidden", "true");
+     startBtn.focus();
+    }
+   });
+
+   stockInput.addEventListener("input", () => {
+    if (stockInput.value.trim()) {
+     clearError();
+    }
+   });
+  </script>
+ 
+</body></html>
